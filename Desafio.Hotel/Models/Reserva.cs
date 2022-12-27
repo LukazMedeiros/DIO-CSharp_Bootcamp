@@ -7,6 +7,14 @@ namespace Desafio.Hotel.Models
 {
     public class Reserva
     {
+        public Reserva(int diasReservados)
+        {
+            if (diasReservados < 1)
+            {
+                throw new Exception("Ao menos 1 dia deve ser reservado");
+            }
+            _diasReservados = diasReservados;
+        }
         private List<Pessoa> _hospede;
         private Suite _suite;
         private int _diasReservados;
