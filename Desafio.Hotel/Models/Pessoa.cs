@@ -7,6 +7,15 @@ namespace Desafio.Hotel.Models
 {
     public class Pessoa
     {
+        public Pessoa(string nome, string sobrenome)
+        {
+            if (nome == "" || sobrenome == "")
+            {
+                throw new Exception("Nome e sobrenome não podem ser vazios");
+            }
+            _nome = nome;
+            _sobrenome = sobrenome;
+        }
         private string _nome;
         private string _sobrenome;
         public string Nome
