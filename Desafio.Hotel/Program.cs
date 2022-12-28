@@ -5,8 +5,8 @@ Console.OutputEncoding = Encoding.UTF8;
 
 List<Pessoa> hospedes = new List<Pessoa>();
 
-Pessoa p1 = new Pessoa(nome: "Hospede1");
-Pessoa p2 = new Pessoa(nome: "Hospede2");
+Pessoa p1 = new Pessoa(nome: "Hospede", sobrenome: "1");
+Pessoa p2 = new Pessoa(nome: "Hospede", sobrenome: "2");
 
 hospedes.Add(p1);
 hospedes.Add(p2);
@@ -18,4 +18,4 @@ reserva.CadastrarSuite(suite);
 reserva.CadastrarHospedes(hospedes);
 
 Console.WriteLine($"Hóspedes: {reserva.ObterQuantidadeHospedes()}");
-Console.WriteLine($"Valor diária {reserva.CalcularValorDiaria()}");
+Console.WriteLine($"Valor diária {reserva.CalcularValorDiaria().ToString("C")}");
